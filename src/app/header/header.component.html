@@ -1,0 +1,18 @@
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+
+<div style="width: 100%; display: table;">
+  <div style="display: table-row">
+    <div style="width: 600px; display: table-cell;">
+      <button id ="all" [ngClass]="{'blue':true,'h1':backgroundNormal, 'h2': !backgroundNormal}" routerLink="/listAll" (click) = "runEvent($event)" >List all persons</button>
+    </div>
+    <div style="width: 600px; display: table-cell;">
+      <button id = "byName" [ngClass]="{'blue':true,'h1':backgroundNorma2, 'h2': !backgroundNorma2}" routerLink="/searchPerson" (click) = "runEvent($event)" >Search persons by name</button>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

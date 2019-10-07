@@ -1,0 +1,23 @@
+<ul class="persons">
+
+  <div style="width: 80%; display: table;">
+    <div style="display: table-row">
+      <div style="width: 600px; display: table-cell;">
+        <input #firstName style="width: 100px">
+        <button (click)="getPersonsByFirstName(firstName.value)">Input first name to search</button>
+      </div>
+      <div style="width: 600px; display: table-cell;">
+        <input #lastName style="width: 100px">
+        <button (click)="getPersonsByLastName(lastName.value)">Input last name to search</button>
+      </div>
+    </div>
+  </div>
+
+  <h2>The persons found by the name you input are : </h2>
+
+  <div >
+    <li *ngFor="let person of personsByName">
+       {{person.firstName}} {{person.lastName}}
+    </li>
+  </div>
+</ul>
